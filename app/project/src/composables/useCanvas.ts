@@ -12,7 +12,7 @@ export function useCanvas(canvasBackgroundColor: Ref<string>) {
       selection: false,
     })
 
-    fabric.FabricImage.fromURL('/src/assets/images/default.png').then((img) => {
+    fabric.FabricImage.fromURL('/images/default.png').then((img) => {
       if (newCanvas.width && newCanvas.height) {
         img.scaleToWidth(newCanvas.width)
         img.scaleToHeight(newCanvas.height)
@@ -54,7 +54,7 @@ export function useCanvas(canvasBackgroundColor: Ref<string>) {
       }
       activeItems.value.delete(item.file)
     } else {
-      const imageUrl = `/src/assets/images/${category}/${item.file}`
+      const imageUrl = `/images/${category}/${item.file}`
       const img = await fabric.FabricImage.fromURL(imageUrl)
 
       img.set({
