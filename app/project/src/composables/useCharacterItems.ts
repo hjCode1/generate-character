@@ -5,7 +5,7 @@ export type Item = {
   name: string
 }
 
-export function useCharacterItems() {
+export const useCharacterItems = () => {
   const faceItems = ref<Item[]>([
     { file: 'Sunglasses_color.png', name: '컬러 선글라스' },
     { file: 'Sunglasses_black.png', name: '블랙 선글라스' },

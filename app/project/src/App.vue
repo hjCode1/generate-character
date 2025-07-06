@@ -33,10 +33,10 @@ const handleSave = () => {
   <v-app>
     <div ref="fireworksContainer" class="fireworks-container" />
     <v-main class="d-flex justify-center align-center">
-      <v-container style="width: 600px">
+      <v-container class="app-container">
         <h2 class="text-center my-4">투니 짤 만들어 쓰기🎨</h2>
         <v-card>
-          <canvas id="canvas" height="400" width="568" />
+          <canvas id="canvas" />
         </v-card>
 
         <v-tabs v-model="tab" class="mt-4">
@@ -110,5 +110,9 @@ const handleSave = () => {
   height: 100%;
   z-index: 9999;
   pointer-events: none;
+}
+main.v-main .app-container {
+  width: 100%;
+  max-width: 600px;
 }
 </style>

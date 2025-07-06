@@ -1,7 +1,7 @@
 import { ref, watch, type Ref } from 'vue'
 import { Fireworks } from 'fireworks-js'
 
-export function useFireworks(container: Ref<HTMLElement | null>) {
+export const useFireworks = (container: Ref<HTMLElement | null>) => {
   const fireworks = ref<Fireworks | null>(null)
 
   watch(container, (newContainer) => {
